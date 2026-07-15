@@ -51,19 +51,19 @@ to test things out before using the real Zenodo deployment.
     1. Edit your "create release" github workflow to add a new step
         that calls the script.
         Example:
-```
-      - name: Create Zenodo deposition
-        env:
-          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-          ZENODO_ID: 553153
-          ZENODO_API_TARGET: https://sandbox.zenodo.org/api
-          ZENODO_VERSION: v1.2.3
-          ZENODO_FILES: |
-            ./sample.png:sample.png
-            ./artifact.zip:artifact.zip
-        run: |
-          ./scripts/zenodo-file-upload.sh
-```
+        ```
+              - name: Create Zenodo deposition
+                env:
+                  ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+                  ZENODO_ID: 553153
+                  ZENODO_API_TARGET: https://sandbox.zenodo.org/api
+                  ZENODO_VERSION: v1.2.3
+                  ZENODO_FILES: |
+                    ./sample.png:sample.png
+                    ./artifact.zip:artifact.zip
+                run: |
+                  ./scripts/zenodo-file-upload.sh
+        ```
         You will need to update the `ZENODO_ID` to match your deposition id;
         `ZENODO_API_TARGET` depending on whether you want to use real Zenodo
         or the sandbox; `ZENODO_VERSION` to be the version of your release
