@@ -16,13 +16,13 @@ delete_draft \
 latest_draft="$(new_version "$ZENODO_API_TARGET/deposit/depositions/553153/")" \
 	|| edie "make new version draft"
 
-echo $latest_draft | grep '^https://sandbox.zenodo.org' \
+echo "$latest_draft" | grep '^https://sandbox.zenodo.org' \
 	|| die "fishy!"
 
 clear_depo_files "$latest_draft" \
 	|| edie "clear depo files"
 
-update_version "$latest_draft" "$tag"
+update_version "$latest_draft" "$ZENODO_VERSION"
 
 for line in $ZENODO_FILES
 do

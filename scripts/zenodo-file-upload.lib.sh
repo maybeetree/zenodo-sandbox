@@ -1,3 +1,5 @@
+#!/bin/sh
+
 token=$ZENODO_TOKEN
 
 #api_real=https://zenodo.org/api
@@ -61,7 +63,7 @@ ree_delete_file() {
 	depo_api="$1"
 	file_id="$2"
 
-	curl -X DELETE $depo_api/files/$file_id \
+	curl -X DELETE "$depo_api/files/$file_id" \
 		| jq \
 		|| edie "delete file"
 
@@ -72,7 +74,7 @@ upload_file() {
 	file_path="$2"
 	file_name="$3"
 	curl -X POST "$depo_api/files" \
-		-F "name=$3" \
+		-F "name=$file_name" \
 		-F "file=@$file_path" \
 		| jq \
 		|| edie "upload file"

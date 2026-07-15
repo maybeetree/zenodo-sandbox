@@ -61,6 +61,7 @@ jobs:
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
           ZENODO_ID: 553153
           ZENODO_API_TARGET: https://sandbox.zenodo.org/api
+          ZENODO_VERSION: ${{env.REPO_TAG}}
           ZENODO_FILES: |
             ./sample.png:sample.png
             ./gateau-${{env.REPO_TAG}}.zip:gateau-${{env.REPO_TAG}}.zip
