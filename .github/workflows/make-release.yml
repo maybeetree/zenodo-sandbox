@@ -27,10 +27,8 @@ jobs:
 
       - name: Get repo info
         run: |
-          echo "
-            REPO_TAG=$(git describe --tags --abbrev=0)
-            REPO_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-            " >> $GITHUB_ENV
+          echo "REPO_TAG=$(git describe --tags --abbrev=0)" >> "$GITHUB_ENV"
+          echo "REPO_BRANCH=$(git rev-parse --abbrev-ref HEAD)" >> "$GITHUB_ENV"
 
       - name: Build sdist
         run: |
