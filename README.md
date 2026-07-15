@@ -85,3 +85,18 @@ description, etc.),
 you need to edit the deposition _corresponding to the deposition
 ID passed to the script_, __not__ the latest version.
 
+
+## License
+
+zenodo-file-upload.sh is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License only.
+
+zenodo-file-upload.sh is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
+for more details.
+
+You should have received a copy of the GNU Affero General Public License along
+with zenodo-file-upload.sh. If not, see https://www.gnu.org/licenses/.
+
