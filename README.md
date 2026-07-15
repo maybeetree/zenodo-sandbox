@@ -1,5 +1,7 @@
 # Upload Github Release Artifacts to Zenodo
 
+[![DOI](https://sandbox.zenodo.org/badge/DOI/10.5072/zenodo.553153.svg)](https://sandbox.zenodo.org/records/553153/latest)
+
 ## Background
 
 [Zenodo](https://zenodo.org/)
@@ -74,7 +76,7 @@ to test things out before using the real Zenodo deployment.
         depository.
 
         You can see a complete workflow file example in this repo
-        under <.github/workflows/make-release.yml>.
+        under `.github/workflows/make-release.yml`.
 
 ## Editing metadata
 
