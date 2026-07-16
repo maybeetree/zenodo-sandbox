@@ -46,7 +46,6 @@ curl() {
 	"$curlcmd" \
 		-L \
 		-s \
-		--fail-with-body \
 		-H "Authorization: Bearer $token" \
 		"$@" 
 }
