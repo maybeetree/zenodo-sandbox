@@ -100,3 +100,7 @@ for more details.
 You should have received a copy of the GNU Affero General Public License along
 with zenodo-file-upload.sh. If not, see https://www.gnu.org/licenses/.
 
+---
+
+Copyright (c) 2026, maybetree.
+
