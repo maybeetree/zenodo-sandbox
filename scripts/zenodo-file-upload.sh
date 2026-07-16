@@ -72,7 +72,7 @@ clear_depo_files() {
 	depo_json="$(curl -X GET "$depo_api")" || edie "get depo info"
 	depo_files="$(
 		echo "$depo_json" \
-			| jq '.files.[].id' --raw-output
+			| jq '.files[].id' --raw-output
 		)" || edie "parse depo info"
 
 	[ -z "$depo_files" ] && {
