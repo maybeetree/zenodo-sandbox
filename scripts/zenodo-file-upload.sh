@@ -189,7 +189,7 @@ update_version() {
 delete_draft \
 	|| edie "delete draft"
 
-latest_draft="$(new_version "$ZENODO_API_TARGET/deposit/depositions/553153/")" \
+latest_draft="$(new_version "$ZENODO_API_TARGET/deposit/depositions/$ZENODO_ID/")" \
 	|| edie "make new version draft"
 
 echo "$latest_draft" | grep '^https://sandbox.zenodo.org' \
